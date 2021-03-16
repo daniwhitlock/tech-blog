@@ -28,14 +28,15 @@
                         {{else}}
                         {{/if}}
                     </li>
+                    {{#if loggedIn}}
                     <li>
-                        {{#if loggedIn}}
                         <button id="logout" class="btn-no-style">Logout</button>
                         {{else}}
-                        <a href="/signuplogin">Login</a>
-                        <a href="/singuplogin">Sign-up</a>
-                        {{/if}}
                     </li>
+                    <li>
+                        <a href="/login">Login/Sign-up</a>
+                    </li>
+                    {{/if}}
                 </ol>
             </nav>
         </header>
