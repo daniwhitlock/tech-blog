@@ -15,26 +15,26 @@
     <div class="wrapper">
         <header>
             <h1>
-                <a href="/">Tech Blog</a>
+                <a class="page-title" href="/">Tech Blog</a>
             </h1>
             <nav>
                 <ol>
                     <li>
-                        <a href="/dashboard">Home</a>
+                        <a class="nav-list" href="/dashboard">Home</a>
                     </li>
                     <li>
                         {{#if loggedIn}}
-                        <a href="/"> Dashboard</a>
+                        <a class="nav-list" href="/"> Dashboard</a>
                         {{else}}
                         {{/if}}
                     </li>
                     {{#if loggedIn}}
                     <li>
-                        <button id="logout" class="btn-no-style">Logout</button>
+                        <button id="logout" class="nav-list">Logout</button>
                         {{else}}
                     </li>
                     <li>
-                        <a href="/login">Login/Sign-up</a>
+                        <a class="nav-list" href="/login">Login/Sign-up</a>
                     </li>
                     {{/if}}
                 </ol>
@@ -43,14 +43,16 @@
         <main>
             {{{ body }}}
         </main>
+
+        {{#if loggedIn}}
+        <script src="/javascript/logout.js"></script>
+        {{/if}}
         <footer>
-            Tech is the future! 
+            Tech is the future!
         </footer>
     </div>
 
-    {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
-    {{/if}}
+
 
 </body>
 
