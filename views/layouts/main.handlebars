@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>
+                <a href="/">Tech Blog</a>
+            </h1>
+            <nav>
+                <ol>
+                    <li>
+                        <a href="/dashboard">Home</a>
+                    </li>
+                    <li>
+                        {{#if loggedIn}}
+                        <a href="/"> Dashboard</a>
+                        {{else}}
+                        {{/if}}
+                    </li>
+                    <li>
+                        {{#if loggedIn}}
+                        <button id="logout" class="btn-no-style">Logout</button>
+                        {{else}}
+                        <a href="/signuplogin">Login</a>
+                        <a href="/singuplogin">Sign-up</a>
+                        {{/if}}
+                    </li>
+                </ol>
+            </nav>
+        </header>
+        <main>
+            {{{ body }}}
+        </main>
+        <footer>
+            Tech is the future! 
+        </footer>
+    </div>
+
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+
+</body>
+
+</html>
