@@ -1,17 +1,17 @@
 * {
     box-sizing: border-box;
-   
 }
 
 :root {
-    --light-color: white;
-    --dark-blue-color: #0a2455; 
-    --yellow-color: #8a8984; 
+    --dark-blue-color: #00111B;
+    --light-accent-color: #2AC0E1;
     --dark-gray-color: #24241d;
+    --bright-accent-color: #f3e631;
 }
+
 body, html {
     height: 100%;
-    background-color: var(--light-color);
+    background-color: white;
     margin: 0;
     padding: 0;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -21,30 +21,14 @@ body, html {
 header {
     background-color: var(--dark-blue-color);
     color: white;
-    margin: 0;
     padding: 10px;
-}
-a {
-    text-decoration: none;
-    color: var(--light-color);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;   
+    display: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.text-area, input {
-    padding: .5%;
-    border-radius: 5px;
-    border: 1px solid var(--yellow-color);
-}
-.page-title {
-   font-size: 5rem; 
-   padding: 10px;
-   letter-spacing: 7px;
-}
-
-a:hover {
-    text-decoration: underline;
+.nav-list:hover {
+    color: var(--bright-accent-color);
 }
 
 button {
@@ -54,56 +38,153 @@ button {
     color: white;
     font-weight: 700;
     cursor: pointer;
-    border-radius: 5px; 
+    border-radius: 5px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-button:hover {
-    background-color: var(--yellow-color);
-    color: var(--dark-gray-color);
+.btn-no-style {
+    background: none;
+    border: none;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 1.5rem;
 }
-.nav-list:hover {
-    text-decoration: underline;
-    background-color: var(--dark-blue-color);
-    color: var(--yellow-color);
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .nav-list {
-    text-transform: uppercase;
-    letter-spacing: 1px;
     background: none;
     border: none;
-    padding: 0;
-    cursor: pointer;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.hero {
+    background-image: url("../images/tech-against-trafficking-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
+    margin: 0;
+}
+
+.page-title {
+    font-size: 5rem;
+    padding: 5px;
+    letter-spacing: 7px;
     text-decoration: none;
-    color: var(--yellow-color);
+    color: white;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.get-started {
+    border: 1px solid white;
+    border-radius: .55rem;
+    background-color: white;
+    color: var(--dark-blue-color);
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.get-started:hover {
+    background-color: var(--bright-accent-color);
+    border-color: var(--bright-accent-color);
+    color: white;
+}
+
+.get-started-words {
+    color: var(--dark-blue-color);
     font-weight: 700;
-    /* font-size: 100%;  */
-    font-weight: bold;
-    transition: color .1s;
-    margin-left: 16px;
-    
-  }
+}
+
+/* Start Main section */
+
+main {
+    margin: 20px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.container2 {
+}
+form > div {
+    margin-bottom: 2%;
+}
+
+form label {
+    display: block;
+}
+
+.form-container {
+    border: 1px solid white;
+    border-radius: .55rem;
+}
 
 
+/* .text-area, input {
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid var(--light-gray-color);
+} */
+
+/* 
 
  .post-list-homepage {
      margin: 0px;
      padding: 0px;
- } 
+ }  */
 
- footer {
-    border-top: 5px solid var(--yellow-color);
-    display: flex;
-    justify-content: center;
-    padding: 1%;
+
+footer {
+    border-top: 5px solid var(--light-accent-color);
+    /* display: flex;
+    justify-content: center; */
+    padding: .5%; 
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 700;
+    font-weight: 300;
     background-color: var(--dark-blue-color);
     color: white;
-  }
-
-
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+}

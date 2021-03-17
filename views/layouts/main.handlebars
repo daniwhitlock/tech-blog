@@ -12,45 +12,62 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div>
         <header>
-            <h1>
-                <a class="page-title" href="/">Tech Blog</a>
-            </h1>
             <nav>
-                <ol>
-                    <li>
-                        <a class="nav-list" href="/dashboard">Home</a>
-                    </li>
-                    <li>
-                        {{#if loggedIn}}
-                        <a class="nav-list" href="/"> Dashboard</a>
-                        {{else}}
-                        {{/if}}
-                    </li>
-                    {{#if loggedIn}}
-                    <li>
-                        <button id="logout" class="nav-list">Logout</button>
-                        {{else}}
-                    </li>
-                    <li>
-                        <a class="nav-list" href="/login">Login/Sign-up</a>
-                    </li>
-                    {{/if}}
-                </ol>
+                <button class="btn-no-style">
+                    <a class="nav-list" href="/dashboard">Home</a>
+                </button>
+
+
+                {{#if loggedIn}}
+                <button class="btn-no-style">
+                    <a class="nav-list" href="/"> Dashboard</a>
+                </button>
+
+                {{else}}
+                {{/if}}
+
+                {{#if loggedIn}}
+
+                <button id="logout" class="btn-no-style">Logout</button>
+                {{else}}
+                <button class="btn-no-style">
+                    <a class="nav-list" href="/login">Login</a>
+                </button>
+
+
+                {{/if}}
+
             </nav>
         </header>
-        <main>
-            {{{ body }}}
-        </main>
+        <section class="hero">
+            <div class="container">
+                <h1>
+                    <a class="page-title" href="/">Tech It Up</a>
+                </h1>
+            </div>
 
-        {{#if loggedIn}}
-        <script src="/javascript/logout.js"></script>
-        {{/if}}
-        <footer>
-            Tech is the future!
-        </footer>
+            <div class="container">
+                <div class="get-started">
+                    <a class="get-started-words" href="/login">Sign up today!</a>
+                </div>
+
+            </div>
+        </section>
     </div>
+
+    <main>
+        {{{ body }}}
+    </main>
+
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+    <footer>
+        Technology is the pathway forward
+    </footer>
+
 
 
 
