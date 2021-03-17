@@ -1,8 +1,9 @@
-<article class="post">
+
+<article class="post center">
     <div class="title">
-        <a href="/post/{{id}}">{{title}}</a>
+        <a class="title" href="/post/{{id}}">{{title}}</a>
     </div>
-    <div class="meta">
+    <div class="meta post-info-meta">
         Created on {{format_date created_at}}
         |
         <div> {{comments.length}} {{format_plural "comment" comments.length}}</div>
@@ -10,6 +11,7 @@
             Created by {{user.username}}
         </div>
     </div>
+
     <div class="content">{{content}}
 
     </div>

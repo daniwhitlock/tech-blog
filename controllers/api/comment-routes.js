@@ -31,7 +31,7 @@ router.post('/', (req, res) => {
   }
 });
 
-//api/coments/4 for example
+//api/comments/4 for example
 router.delete('/:id', (req, res) => {
   Comment.destroy({
     where: {

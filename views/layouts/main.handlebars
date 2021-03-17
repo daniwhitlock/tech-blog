@@ -16,13 +16,13 @@
         <header>
             <nav>
                 <button class="btn-no-style">
-                    <a class="nav-list" href="/dashboard">Home</a>
+                    <a class="nav-list" href="/">Home</a>
                 </button>
 
 
                 {{#if loggedIn}}
                 <button class="btn-no-style">
-                    <a class="nav-list" href="/"> Dashboard</a>
+                    <a class="nav-list" href="/dashboard"> Dashboard</a>
                 </button>
 
                 {{else}}
@@ -35,8 +35,6 @@
                 <button class="btn-no-style">
                     <a class="nav-list" href="/login">Login</a>
                 </button>
-
-
                 {{/if}}
 
             </nav>
@@ -47,13 +45,14 @@
                     <a class="page-title" href="/">Tech It Up</a>
                 </h1>
             </div>
-
+            {{#if loggedIn}}
+            {{else}}
             <div class="container">
                 <div class="get-started">
                     <a class="get-started-words" href="/login">Sign up today!</a>
                 </div>
-
             </div>
+            {{/if}}
         </section>
     </div>
 

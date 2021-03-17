@@ -8,12 +8,17 @@
         </div>
 
         <div>
-            <button type="submit">Add Comment</button>
+            <button class="btn" type="submit">Add Comment</button>
         </div>
     </form>
     {{/if}}
 
-  {{> comments post.comments}}
+    <div class="page-header left">
+        <h2>
+            Comments
+        </h2>
+    </div>
+    {{> comments post.comments}}
 
     {{#if loggedIn}}
     <script src="/javascript/comment.js"></script>
