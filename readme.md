@@ -11,7 +11,7 @@ Come and sign-up to be able to create your own blog posts and make comment on ot
 * Express
 
 ## Check It Out Here 
-https://daniwhitlock.github.io/run-buddy/
+https://salty-woodland-41746.herokuapp.com/
 
 
 ![image](https://user-images.githubusercontent.com/72768805/111439108-a3874880-86ca-11eb-9860-79e58ab6510c.png)
