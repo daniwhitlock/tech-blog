@@ -1,10 +1,16 @@
+<div class="page-header">
+    <h1>
+        Single Post
+    </h1>
+</div>
+
 <article class="post">
     {{> post-info post }}
 
     {{#if loggedIn}}
     <form class="comment-form">
         <div>
-            <textarea name="comment-body"></textarea>
+            <textarea class="input-padding" name="comment-body"></textarea>
         </div>
 
         <div>
